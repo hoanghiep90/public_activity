@@ -6,7 +6,7 @@ module PublicActivity
     class MigrationGenerator < ActiveRecord::Generators::Base
       source_root File.expand_path("../templates", __FILE__)
 
-      argument :name, :type => :string, :default => 'create_activities'
+      argument :name, :type => :string, :default => 'create_public_activities'
       # Create migration in project's folder
       def generate_files
         migration_template 'migration.rb', "db/migrate/#{name}.rb"
